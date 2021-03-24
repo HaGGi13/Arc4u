@@ -1,6 +1,6 @@
 # Guidance.
 
-## The Guidance is a Visual Studio extension allowing you to build quickly an application.
+## The Guidance is a Visual Studio extension allowing you to quickly build an application.
 
 The Guidance help you to build an application based on best practices and improve the productivity of the developer. 
 
