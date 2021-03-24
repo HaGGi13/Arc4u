@@ -153,6 +153,6 @@ What happens if you have mapped an entity to 2 different collections (on the sam
 <br>In this case, the following exception will be thrown: TypeMappedToMoreThanOneCollectionException.
 
 >[!TIP]
->You can in this case specify the collection you want by calling the GetCollection<T>("name of the collection").
+>You can in this case specify the collection you want by calling the GetCollection\<T\>("name of the collection").
 
 
