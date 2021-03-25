@@ -120,7 +120,7 @@ In the Database project, we will have the following syntax:
 
 ```csharp
 
-public class Users : IUsers
+public class UsersDL : IUsersDL
 {
     public Users(IMongoClientFactory<DemoContext> factory)
     {
