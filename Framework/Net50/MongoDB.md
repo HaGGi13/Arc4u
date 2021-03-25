@@ -73,6 +73,10 @@ To do this we will create a DemoContext class.
 ```
 Now we have associated the entities to a specific collection.
 
+>[!IMPORTANT]
+>It is not recommended to use more than one entity by collection.
+>It is possible technically and I want to cover this need but this should be the exception.
+
 #### Entities.
 
 At the level of the Entities declared in the Domain.Model project, adds the MongoDB.Bson package so we can define the BsonId attribute.
