@@ -10,6 +10,7 @@ This version adds the following features:
 - Http/2
 - gRPC
 - Ef Core Migration tool.
+- Use Kestrel instead of IIS Express for the development.
 
 ## Backend micro-service file structure organisation.
 
@@ -36,6 +37,7 @@ As in the feature we will have one .net (.net 6.0) the use of .net standard 2.1 
 Only the Sdks dlls are differents and will be explained later.
 
 This is an example from a Solution6 generated code.
+
 ```csharp
 
 The project structure is now like this:
@@ -77,6 +79,12 @@ We have 2 behaviors to define:
 - gRpc.
 
 And those 2 behaviors are dependent of the context: UI or backend.
+
+For details about the gRPC integration in Arc4u, please read this section : [gRPC](./../Framework/Net50/gRPC.md).
+
+#### Rest Api.
+
+Rest in combination with Swagger is a very good 
 
 #### gRPC.
 
