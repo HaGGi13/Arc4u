@@ -19,7 +19,7 @@ To be more concentrated on the core business of the micro-services, the Sdks, un
 - Tests for testing projects. Today only integration one is created by default.
 - Tools for any tools like the migraiton one for EF Core.
 
-## AspNet 5.0?
+## AspNet Core 5.0?
 
 This version of the Guidance is using the .net5.0 Arc4u dlls.
 Those dlls are versioned like this:
@@ -30,7 +30,7 @@ Those dlls are versioned like this:
   PrismVersion: '7.2.5000.0'
 
 The migration from .netCore 3.1 to .net5.0 is not complex.
-There is more subtleties related to the introduction of http/2 and gRPC than the use of ASP.Net 5.0.
+There is more subtleties related to the introduction of http/2 and gRPC than the use of ASPNet Core 5.0.
 
 The first thing to do is to change the target framework from .netcore3.1 to .net5.0.
 As in the feature we will have one .net (.net 6.0) the use of .net standard 2.1 from the different projects are replaced by the .net 5.0 one.
