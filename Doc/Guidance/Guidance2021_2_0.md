@@ -70,6 +70,19 @@ The complexity of the kestrel configuration  regarding the usage of http/2 will 
 
 After, you have to update the program.cs and startup.cs code to integrate the gRPC capabilities.
 
+## Kestrel.
+
+From this version of the guidance we don't use anymore IIS Express but Kestrel.
+
+The good question can be why?
+
+As we have now gRPC, IIS Express and IIS are not valid anymore. gRPC on HTTP2 is not supported and kestrel (which is used when we deploy on linux and k8s pods) is the way to do.
+
+If you deploy a version of a service with no gRPC => IIS will work perfectly. It means that if you do the upgrade of an existing .Net Core 3.1 project (no gRPC was used in previous version of the Guidance),
+your project will continue to be able to deploy on IIS.
+
+
+
 ### Http/2.
 
 Http/2 is now the standard protocol to use for our communication between clients and services but also from services to services.
@@ -84,7 +97,7 @@ For details about the gRPC integration in Arc4u, please read this section : [gRP
 
 #### Rest Api.
 
-Rest in combination with Swagger is a very good 
+Rest 
 
 #### gRPC.
 

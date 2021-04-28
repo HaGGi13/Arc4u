@@ -50,6 +50,7 @@ The asynchronous messages (message broker) handlers are implemented also at the 
 #### Dtos.
 
 We use Automapper (when extreme performance is not needed) to map the object of the domain model (POCO) to the Dtos.
+In case large set of data are to map, manual mapping will be probably the best choice => but do allways an evaluation of this.
 
 ### Service Agent.
 
@@ -85,7 +86,7 @@ When we build an application based on micro-services architecture we have the fo
                     |               | http/2  |               |
                     |               | <---->  |   Service2    |
                     |               |         |               |
-                    |---------------|         |               |               |
+                    |---------------|         |               |
                                               |---------------|
                     
                                             |-------------------------------------------|
@@ -100,4 +101,5 @@ The reverse proxy (Microsoft reverse proxy) does the job to route the traffic wi
 - Api Gateway.
 - OAuth 2.0 / OpenID Connect
 - gRPC and Rest
+- HealthCheck portal => AspNetCore.HealthChecks.
 
