@@ -91,7 +91,7 @@ All the communication in those cases are encrypted! We have to inform the config
         "Protocols": "Http1AndHttp2",
         "Scheme": "https",
         "Certificate": {
-          "Subject": "*.tmd.belgrid.net",
+          "Subject": "*.arc4u.net",
           "Store": "My",
           "Location": "LocalMachine",
           "AllowInvalid": true
