@@ -118,6 +118,8 @@ plain text  because they are not exposed directly (ClusterIP).
 
 So we can assume that there is no need to have a certificate even if this is completely possible.
 
+
+
 #### Yarp.
 
 We will have a look first at the reverse proxy one.
@@ -134,6 +136,10 @@ We will have a look first at the reverse proxy one.
           "KeyPath": "certs/tls.key"
         }
       },
+      "internal": {
+        "Url": "http://*:5000",
+        "Protocols": "Http2"
+      },
       "Probe": {
         "Url": "http://*:8080",
         "Protocols": "Http1"
@@ -146,7 +152,9 @@ We will have a look first at the reverse proxy one.
 First of all, the Kestrel is configured to be serving requests via TLS 1.2 and the default port defined by AspNetCore for this is 5001.
 The protocols defined is Http1AndHttp2 and certificate are added via Secret and included to the image via volume in Kubernets.
 
-A second endpoint defined is a "non secured" one for the readiness and liveness feature of Kubernetes. This will serve the HealthCheck part of the AspNetCore framework
+To avoid https communication between internal services in Kubernetes, an second internal endpoint is defined with http/2 as protocol.
+
+A third endpoint defined is a "non secured" one for the readiness and liveness feature of Kubernetes. This will serve the HealthCheck part of the AspNetCore framework
 and will not be exposed outside of the pod. This is the puropose of the Probe endpoint defined in plain text and in Http/1
 
 
